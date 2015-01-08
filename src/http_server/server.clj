@@ -36,10 +36,10 @@
 (defn -main [& args]
   (future
     (loop []
-      (Thread/sleep 30000)
-      (println (format "Served %s requests in 30 seconds" @counter-1))
-      (println (format "Served %s requests in 30 seconds" @counter-2))
-      (println (format "Served %s requests in 30 seconds" @counter-3))
+      (Thread/sleep 1000)
+      (println (format "Served %s requests in 1 second" @counter-1))
+      (println (format "Served %s requests in 1 second" @counter-2))
+      (println (format "Served %s requests in 1 second" @counter-3))
       (prn "===")
       (dosync (alter counter-1 (constantly 0)))
       (dosync (alter counter-2 (constantly 0)))
