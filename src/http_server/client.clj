@@ -14,5 +14,6 @@
         (doseq [_ (range n)]
           (http/get uri)
           (Thread/sleep drag))))
-    (prn "Done")))
+    (prn "Done")
+    @(future (while true))))
 
