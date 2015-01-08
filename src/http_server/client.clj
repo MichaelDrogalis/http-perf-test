@@ -13,7 +13,7 @@
       (future
         (doseq [_ (range n)]
           (http/get uri)
-          (when (rand-nth [true false])
+          (when (< (rand) 0.80)
             (Thread/sleep drag)))))
     (prn "Done")
     @(future (while true))))
